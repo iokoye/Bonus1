@@ -11,6 +11,8 @@ namespace Bonus1.Tests
             var converter = new GradeConverter();
 
             var result = converter.LetterGrade(90);
+
+            Assert.Equal("Letter Grade: A", result);
         }
     }
 }
