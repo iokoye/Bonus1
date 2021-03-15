@@ -17,7 +17,7 @@ namespace Bonus1
 
                 GradeConverter grade = new GradeConverter();
 
-                grade.LetterGrade(gradeNum);
+                Console.WriteLine(grade.LetterGrade(gradeNum));
 
                 Console.WriteLine("Continue? (y/n):");
                 answer = Console.ReadLine();
@@ -29,28 +29,29 @@ namespace Bonus1
                 Console.WriteLine("Have a good day!");
             }
         }
-        public void LetterGrade(int gradeNum)
+        public string LetterGrade(int gradeNum)
         { 
             if (gradeNum <= 100 && gradeNum >= 88)
             {
-                Console.WriteLine("Letter Grade: A");
+                return "Letter Grade: A";
             }
             else if (gradeNum <= 87 && gradeNum >= 80)
             {
-                Console.WriteLine("Letter Grade: B");
+                return "Letter Grade: B";
             }
             else if (gradeNum <= 79 && gradeNum >= 67)
             {
-                Console.WriteLine("Letter Grade: C");
+                return "Letter Grade: C";
             }
             else if (gradeNum <= 66 && gradeNum >= 61)
             {
-                Console.WriteLine("Letter Grade: D");
+                return "Letter Grade: D";
             }
             else if (gradeNum <= 60 && gradeNum >= 0)
             {
-                Console.WriteLine("Letter Grade: F");
+                return "Letter Grade: F";
             }
+            return null;
         }
     }
 }
